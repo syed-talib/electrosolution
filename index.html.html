@@ -1,0 +1,171 @@
+<html>
+<head><title>electricsolution.com</title></head>
+<style>
+
+body{background-color:whitesmoke;         
+          
+}
+h1{background-color:lightcyan;
+      height:256px;
+      font-size:40px;
+      color:black;
+      box-shadow:0px 0px 40px;
+    
+   
+     
+}
+p{ font-size:15px;
+    color:black;}
+input{height:30px;}
+input:hover{
+                background-color: black;
+                color: white;
+}
+div{background-color:lightcyan;
+      width:48%;
+      padding-top:10px;
+       padding-bottom:20px;
+       box-shadow:0px 0px 20px;}
+body{
+
+    background-color: white;
+    color: black;
+}
+
+
+</style>
+
+<body>
+<form>
+<h1 align="left"><p align="left"><br>&nbsp&nbspcreated by syed talib ,<br>&nbsp&nbspAtention !!!! here you can check your electricity bill<br>&nbsp&nbsp just only one click , get the information about your <br>&nbsp&nbsprelated issues or your needs!!!<br>&nbsp&nbspTHANKING YOU</p><br/><br/>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspELECTRIC BILL CHECK&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h1>
+
+<br/>
+<div>
+<h2>&nbsp&nbsp&nbsp&nbsp&nbsp&nbspName&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOld-Amount&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspNew-Amount</h2>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n"placeholder="Candidate 1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="na"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nab"placeholder="N-Amount">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n1"placeholder="Candidate 2">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nb"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nac"placeholder="N-Amount">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n2"placeholder="Candidate 3">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nc"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nad"placeholder="N-Amount">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n3"placeholder="Candidate 4">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nd"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nae"placeholder="N-Amount">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n4"placeholder="Candidate 5">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="ne"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="naf"placeholder="N-Amount">
+<br><br>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text"id="n5"placeholder="Candidate 6">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nf"placeholder="O-Amount">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="nag"placeholder="N-Amount">
+<br><br>
+<h2>&nbsp&nbsp&nbsp&nbsp&nbspBill</h2>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="bi"placeholder="Enter bill">
+<br><br>
+<h2>&nbsp&nbsp&nbsp&nbsp&nbspUnit</h2>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="number"id="u"placeholder="Enter Unit">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="button"value="CHECK"onclick="elc()" style="background-color:lightgreen">
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset"value="Clear-All"style="background-color:tomato">
+</div>
+
+<script>
+function elc()
+{
+        var n=document.getElementById("n").value;
+        var na=parseInt(document.getElementById("na").value); 
+        var nab=parseInt(document.getElementById("nab").value);    
+        var u=parseFloat(document.getElementById("u").value);
+        var bi=parseInt(document.getElementById("bi").value);
+        var n1=document.getElementById("n1").value;
+       var nb=parseInt(document.getElementById("nb").value);        
+       var nac=parseInt(document.getElementById("nac").value); 
+        var n2=document.getElementById("n2").value;
+        var nc=parseInt(document.getElementById("nc").value);
+        var nad=parseInt(document.getElementById("nad").value); 
+       var n3=document.getElementById("n3").value;
+        var nd=parseInt(document.getElementById("nd").value);
+        var nae=parseInt(document.getElementById("nae").value); 
+       var n4=document.getElementById("n4").value;
+       var ne=parseInt(document.getElementById("ne").value);
+      var naf=parseInt(document.getElementById("naf").value); 
+      var n5=document.getElementById("n5").value;
+        var nf=parseInt(document.getElementById("nf").value);
+        var nag=parseInt(document.getElementById("nag").value); 
+       
+          var c1=Math.abs(na-nab)*u;
+          var c2=Math.abs(nb-nac)*u;
+          var c3=Math.abs(nc-nad)*u;
+          var c4=Math.abs(nd-nae)*u;
+          var c5=Math.abs(ne-naf)*u;
+          var c6=Math.abs(nf-nag)*u;
+          var total=(c1+c2+c3+c4+c5+c6);
+         var ext=Math.abs(total-bi);
+         var division=Math.abs(ext/6);
+         var c7=Math.floor(c1);
+         var c8=Math.floor(c2);
+         var c9=Math.floor(c3);
+         var c10=Math.floor(c4);
+         var c11=Math.floor(c5);
+         var c12=Math.floor(c6);
+         var Total=Math.floor(total);
+         var Ext=Math.floor(ext);
+         var Division=Math.floor(division);
+        document.write("<br/>candidate 1: "+n);
+       document.write("<br/>exact-Amount: "+c7);
+       document.write("<br/>candidate 2: "+n1);
+       document.write("<br/>exact-Amount: "+c8);
+       document.write("<br/>candidate 3: "+n2);
+       document.write("<br/>exact-Amount: "+c9);
+       document.write("<br/>candidate 4: "+n3);
+       document.write("<br/>exact-Amount: "+c10);
+       document.write("<br/>candidate 5: "+n4);
+       document.write("<br/>exact-Amount: "+c11);
+       document.write("<br/>candidate 6: "+n5);
+       document.write("<br/>exact-Amount: "+c12);
+       document.write("<br/><br/><br/><br/><br/>Total-Amount: "+Total);
+       document.write("<br/>Final-total-amount(total - bill): "+Ext);
+       document.write("<br/>Water/each person: "+Division);
+       var next=Math.abs(bi-Total);
+       var Next=Math.floor(next);
+       document.write("</br>Extra :"+Next);
+       var div=Next/6;
+       var s1=c7+div;
+       var s2=c8+div;
+       var s3=c9+div;
+       var s4=c10+div;
+       var s5=c11+div;
+       var s6=c12+div;
+
+       var s7=Math.floor(s1);
+       var s8=Math.floor(s2);
+       var s9=Math.floor(s3);
+       var s10=Math.floor(s4);
+       var s11=Math.floor(s5);
+       var s12=Math.floor(s6);
+       document.write("<br><br><br>");
+       document.write("FINAL RESULT"+"<br>");
+       document.write("----------------------------------------------------------------------------------------");
+       document.write("<br>UNIT :"+u);
+       document.write("<br/>candidate 1: "+n);
+       document.write("<br/>exact-Amount: "+s7);
+       document.write("<br/>candidate 2: "+n1);
+       document.write("<br/>exact-Amount: "+s8);
+       document.write("<br/>candidate 3: "+n2);
+       document.write("<br/>exact-Amount: "+s9);
+       document.write("<br/>candidate 4: "+n3);
+       document.write("<br/>exact-Amount: "+s10);
+       document.write("<br/>candidate 5: "+n4);
+       document.write("<br/>exact-Amount: "+s11);
+       document.write("<br/>candidate 6: "+n5);
+       document.write("<br/>exact-Amount: "+s12);
+       document.write("<br>");
+       var tfinal=s7+s8+s9+s10+s11+s12;
+       var Tfinal=Math.floor(tfinal);
+       document.write("<br>");
+       document.write("TOTAL :"+Tfinal);
+       document.write("<br>");
+       document.write("<br/>Water/each person: "+Division);
+       document.write("<br>");
+       document.write("----------------------------------------------------------------------------------------");
+
+
+
+        
+}
+</script>
+</body>
+</html>
